@@ -14,3 +14,7 @@ body {
 #burgerTable {
     text-align: center;
 }
+
+.burgerImage {
+    width: 150px;
+}
