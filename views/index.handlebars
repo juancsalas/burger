@@ -1,0 +1,45 @@
+<div class="container">
+    <div class="row text-center">
+        <div class="col">
+            <h1>Burger Image</h1>
+        </div>
+    </div>
+
+    <div class="row text-center">
+        <div class="col">
+            <h2>Eat-Da-Burger</h2>
+        </div>
+    </div>
+
+    <div id="burgerTable" class="row">
+        <ol class="col-6 text-center">
+            {{#each burgers}}
+                {{#unless devoured}}
+                    {{> burger-block devoured=true}}
+                {{/unless}}
+            {{/each}}
+        </ol>
+ 
+        <ol class="col-6 text-center">
+            {{#each burgers}}
+                {{#if devoured}}
+                    {{>burger-block devoured=false}}
+                {{/if}}
+            {{/each}}
+        </ol>   
+    </div>
+
+    <div class="row">
+        <div class="col-4 offset-4 text-center">
+            <form class="create-form">
+
+                <div class="form-group">
+                    <label for="newBurger"></label>
+                    <textarea class="form-control" type="text" name="name" id="newBurger" rows="3"></textarea>
+                </div>
+
+                <button class="btn btn-info btn-small"  type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>

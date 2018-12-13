@@ -1,0 +1,16 @@
+body {
+    background-color: #facf79;  
+    height: 100%;  
+}
+
+.devoured {
+    font-size: 11px;
+}
+
+.burgerItem {
+    text-align: center;
+}
+
+#burgerTable {
+    text-align: center;
+}
