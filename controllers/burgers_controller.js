@@ -2,6 +2,7 @@ var express = require("express");
 var router = express.Router();
 var burgers = require("../models/burger.js");
 
+// Path for home page
 router.get("/", function(req,res){
     burgers.selectAll(function(data){
         
@@ -14,6 +15,7 @@ router.get("/", function(req,res){
     });
 });
 
+// Path that insterts new burget
 router.post("/api/burgers", function(req, res){
 
     console.log(req.body);
@@ -25,10 +27,9 @@ router.post("/api/burgers", function(req, res){
     })
 })
 
+// Path that updates burger state
 router.put("/api/burgers/:id", function(req, res){
     var condition = "id = " + req.params.id;
-
-    console.log("condition", condition);
 
     burgers.updateOne(
         {

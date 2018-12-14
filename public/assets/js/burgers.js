@@ -1,4 +1,6 @@
 $(document).ready(function (){
+
+    // Event function for the Devoure Me button
     $(".devoured").on("click", function(event){
                 
         event.preventDefault();        
@@ -26,6 +28,7 @@ $(document).ready(function (){
         );
     });
 
+    // Event function handling the creation of new burgers
     $(".create-form").on("submit", function(event){
         event.preventDefault();
 

@@ -1,4 +1,6 @@
 <div class="container">
+
+    {{!-- Row for the image --}}
     <div class="row text-center">
         <div class="col">
             <br>
@@ -6,6 +8,7 @@
         </div>
     </div>
 
+    {{!-- Row for the title --}}
     <div class="row text-center">
         <div class="col">
             <br>
@@ -13,7 +16,10 @@
         </div>
     </div>
 
+    {{!-- Row for the burger names and button --}}
     <div id="burgerTable" class="row">
+
+        {{!-- column holds the non devoured burgers and button --}}
         <ol class="col-6 text-center">
             {{#each burgers}}
                 {{#unless devoured}}
@@ -21,7 +27,8 @@
                 {{/unless}}
             {{/each}}
         </ol>
- 
+
+        {{!-- column holds devoured burger --}}
         <ol class="col-6 text-center">
             {{#each burgers}}
                 {{#if devoured}}
@@ -31,8 +38,9 @@
         </ol>   
     </div>
 
+    {{!-- Row containing the form to add burgers --}}
     <div class="row">
-        <div class="col-4 offset-4 text-center">
+        <div class="col-6 offset-3 text-center">
             <form class="create-form">
 
                 <div class="form-group">
@@ -41,6 +49,7 @@
                 </div>
 
                 <button class="btn btn-info btn-small"  type="submit">Submit</button>
+                <p class="message">Enter a burger you want to eat and hit the "Submit" button.</p>
             </form>
         </div>
     </div>

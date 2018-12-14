@@ -1,3 +1,5 @@
+// mySQL connection info with heroku code that handles the connection
+
 var mysql = require("mysql");
 var connection;
 

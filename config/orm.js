@@ -1,5 +1,7 @@
+// Various functions that get sent to mySQL for processing
 var connection = require ("./connection.js")
 
+// Creates an array of question marks to use in the mySQL query
 function printQuestionMarks(valueNumbers) {
     var arr = [];
   
@@ -10,6 +12,7 @@ function printQuestionMarks(valueNumbers) {
     return arr.toString();
 }
 
+// Changes key value objects to strings
 function objToSql(objectPair) {
     var objectArray = [];
   
@@ -30,6 +33,8 @@ function objToSql(objectPair) {
 
 
 var orm = {
+
+    // Each function that displays all, adds or updates one element from mySQL table
     selectAll: function(tableName, cb){
 
         var query = "SELECT * FROM " + tableName + ";";
